@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "declaration": false,
+    "lib": [
+      "es6",
+      "dom"
+    ],
+    "noEmitOnError": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "module": "commonjs",
+    "moduleResolution": "node"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "awesomeTypescriptLoaderOptions": {
+    "useTranspileModule": true
+  }
+}
