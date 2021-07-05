@@ -1,18 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="UserService" ng-strict-di ng-cloak>
 <head>
   <meta charset="utf-8">
   <title>Welcome | Angular-1.5-cli</title>
-  <script src="./user/_user.ts"></script>
-  <script src="./user/components/UserComponent.ts"></script>
-  <script src="./_user_service.ts"></script>
-  <script src="./Application.ts"></script>
   <base href="/">
 </head>
-<body ng-app="UserService" ng-strict-di ng-cloak>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+<% for (key in htmlWebpackPlugin.files.chunks) { %>
+<% if (key === 'vendor') { %>
+<script src="<%= htmlWebpackPlugin.files.chunks[key].entry %>" type="text/javascript"></script>
+<% } %>
+<% } %>
+<body>
 
-<user></user>
-
+<UserService></UserService>
 
 </body>
 </html>
