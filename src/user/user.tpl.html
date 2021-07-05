@@ -20,14 +20,15 @@
     <div class="col-md-10">
       <!--Body content-->
 
+      <button class="btn solid-btn"
+              ng-click="UserComponentController.getBalance()">Fetch users</button>
       <ul class="users">
         <li ng-repeat="user in $ctrl.users | filter:$ctrl.query | orderBy:$ctrl.orderProp"
             class="thumbnail user-list-item">
-          <a href="#!/users/{{user.id}}" class="thumb">
-            <img ng-src="{{user.imageUrl}}" alt="{{user.name}}" />
-          </a>
-          <a href="#!/users/{{user.id}}">{{user.name}}</a>
-          <p>{{user.snippet}}</p>
+          <a>{{user.id}}</a>
+          <a>{{user.username}}</a>
+          <a>{{user.name}}</a>
+          <a>{{user.surname}}</a>
         </li>
       </ul>
 

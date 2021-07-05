@@ -13,14 +13,16 @@ import "intl-tel-input";
 import "md-date-range-picker/dist/md-date-range-picker.min.js";
 import "ment.io";
 import "ng-infinite-scroll"
-import {module_user_service} from "./_user_service";
+import {module_user} from "./user/_user";
+import {PublicRoutes} from "./user/configuration/PublicRoutes";
 
 export class Application {
 
     public application: angular.IModule;
 
     constructor() {
-        this.application = angular.module(module_user_service);
+        this.application = angular.module(module_user);
+        PublicRoutes.addRoutes(this.application);
     }
 }
 

@@ -3,24 +3,16 @@
 <head>
   <meta charset="utf-8">
   <title>Welcome | Angular-1.5-cli</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="description" content="A cli for Angular 1.5">
-  <link rel="icon" href="favicon.jpg">
+  <script src="./user/_user.ts"></script>
+  <script src="./user/components/UserComponent.ts"></script>
+  <script src="./_user_service.ts"></script>
+  <script src="./Application.ts"></script>
   <base href="/">
 </head>
 <body ng-app="UserService" ng-strict-di ng-cloak>
 
-<UserService>
-  User service
-</UserService>
+<user></user>
 
-<script src="bundle.js"></script>
-<script src="user/_user.ts"></script>
-<script src="src/user/components/UserComponent.ts"></script>
-<script src="src/_user_service.ts"></script>
-<script src="./Application.ts"></script>
+
 </body>
 </html>
